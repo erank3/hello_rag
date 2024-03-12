@@ -1,30 +1,11 @@
-Running the Hello_Rag Docker Image
- 
-This guide will help you build and run the Hello_Rag Docker image, and use it to ask questions.
-Prerequisites
- 
-Before you begin, make sure you have Docker installed on your machine.
-Configuration
- 
-The OPENAI_API_KEY is defined in the Dockerfile. Make sure to replace it with your actual OpenAI API key.
-Building the Docker Image
- 
-To build the Docker image, navigate to the directory containing the Dockerfile and execute the following command:
+# define OPENAI_API_KEY in the docker file
 
-docker build -t hello_rag .    
- 
-This command builds the Docker image and tags it with the name hello_rag.
-Running the Docker Container
- 
-Once the Docker image is built, you can run it using the following command:
+# build docker file
+docker build -t hello_rag .   
 
-docker run -p 8000:80 hello_rag  
- 
-This command runs the Docker container and maps port 80 inside the container to port 8000 on your host machine.
-Asking a Question
- 
-With the Docker container running, you can ask a question by navigating to the following URL in your web browser:
+# run docker
+docker run -p 8000:80 hello_rag
 
-http://localhost:8000/?question="what is the title of the doc?"  
- 
-Replace "what is the title of the doc?" with your actual question.
+# asking a question:
+http://localhost:8000/?question="what is the title of the doc?"
+
