@@ -1,0 +1,11 @@
+# define OPENAI_API_KEY in the docker file
+
+# build docker file
+docker build -t hello_rag .   
+
+# run docker
+docker run -p 8000:80 hello_rag
+
+# asking a question:
+http://localhost:8000/?question="what is the title of the doc?"
+
